@@ -24,7 +24,7 @@ class MultiVAE(nn.Module):
             self.decoder.append(nn.Linear(din, dout))
 
     def encode(self, x):
-        h = F.normalize(x, p=2, dim=1)
+        h=x 
         h = F.dropout(h, p=self.drop, training=self.training)
 
         for layer in self.encoder[:-1]:
