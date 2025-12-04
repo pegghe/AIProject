@@ -15,7 +15,7 @@ def item_knn_scores(
 ) -> sp.sparse.csr_matrix:
     
     S = my_cosine_similarity(X_train)
-    S_topk = get_top_K_values(S, neighbor_count) 
+    S_topk = get_top_K_values(S, neighbor_count)
     scores = X_test_in @ S_topk.T
     scores = scores.tocsr()
     scores.eliminate_zeros()
