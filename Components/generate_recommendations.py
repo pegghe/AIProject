@@ -11,7 +11,6 @@ def multivae_recommend(
 ):
     """
     Generate recommendations for test users using MultiVAE.
-    Works with the mapping-based pipeline we built.
 
     Parameters:
         model               : trained MultiVAE
